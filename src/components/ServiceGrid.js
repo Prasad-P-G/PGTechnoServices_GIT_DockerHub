@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ServiceGrid = ({ icon, text, label, heading }) => {
   return (
@@ -12,10 +13,14 @@ const ServiceGrid = ({ icon, text, label, heading }) => {
       <h1 className="text-2xl lg:text-3xl text-center text-green-600 font-semibold ">
         {heading}
       </h1>
-      <h1 className="text-[18px] text-center text-slate-500">{text}</h1>
-      <p className="bg-green-800 text-white px-6 py-2 rounded-md hover:bg-black hover:text-white cursor-pointer">
-        {label}
-      </p>
+      <h1 className=" text-[14px] lg:text-[18px] text-center text-slate-500">
+        {text}
+      </h1>
+      <NavLink to={label}>
+        <p className="bg-green-800 text-white px-3 py-2 rounded-md hover:bg-black hover:text-white cursor-pointer">
+          View More
+        </p>
+      </NavLink>
     </div>
   );
 };
