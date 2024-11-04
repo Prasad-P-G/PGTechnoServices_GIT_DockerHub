@@ -29,25 +29,25 @@ export const servicegrids = [
   {
     icon: mad,
     heading: "Mobile Application Development",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    text: "We create software for mobile devices, such as smartphones, tablets, and digital assistants",
     label: "/MobileAppDevMore",
   },
   {
     icon: api,
-    heading: "Rest API & Website Development",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    heading: "Rest API & Web Application Development",
+    text: "We have experience in developing Rest APIs using different cross platform technologies, which will help web applications more scalable , flexible and easily mentainable. Our goal is to adhere to customer technology requirements to develope webapplications and mobile applications and also we make sure , use of technologies who have larger community support in future mentainance.",
     label: "/ApiMore",
   },
   {
     icon: websitedesign,
     heading: "Responsive Web Designing",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    text: "We design websites to adapt to customers devices. The motive is to develope websites to retain their optimal usability and appearance regardless of the devices on which they are displayed",
     label: "/WebsiteDesignMore",
   },
   {
     icon: st,
-    heading: "On-Job Software Training",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    heading: "On-the-Job Training",
+    text: "We train existing and new employees on new applicable skills for their role or for business need in our workplace while performing their current activities. The training is not specific to any technologies.",
     label: "/softwareTrainingMore",
   },
 ];
@@ -88,14 +88,14 @@ export const serviceMoregrids = [
 export const productgrids = [
   {
     icon: ssm,
-    heading: "Software Services & Mentainance",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    heading: "E-Commerce web-Applications",
+    text: "These will allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service",
     label: "View More",
   },
   {
     icon: mad,
-    heading: "Mobile Application Development",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    heading: "E-Commerce Mobile Apps",
+    text: "We Develope Mobile apps as per customer requirements covering most of the features to target their bussiness in hand. Now days Smartphone users are increasing by leaps and bounds. According to Market Statistics, currently billions of people worldwide use smartphones to achieve their day-to-day needs, be it cab booking, online ticket purchasing, reading news, shopping, and managing businesses or Mobile Commerce",
     label: "View More",
   },
   {

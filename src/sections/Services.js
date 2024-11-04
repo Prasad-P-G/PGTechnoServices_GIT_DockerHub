@@ -8,13 +8,13 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full bg-slate-200 flex flex-col lg:flex-row gap-5 lg:gap-10 h-auto px-7 py-4 lg:px-16 lg-py-8"
+      className="w-full bg-slate-200 flex flex-col customShadow gap-2 h-auto px-7 py-4 lg:px-16 lg-py-8"
     >
-      <div className="flex lg:py-[20px]  items-start flex-col gap-8 lg:w-1/2">
-        <h1 className=" font-bold text-2xl lg:text-4xl text-blue-900 py-10 w-full bg-yellow-100 text-center">
+      <div className="flex lg:py-[20px] flex-col gap-2 lg:w-1/2 customShadow">
+        <h1 className=" font-bold text-2xl lg:text-4xl text-white py-10 w-full bg-[#207FD2] text-center">
           Our Services and activities
         </h1>
-        <p className="text-black text-sm lg:text-xl">
+        <p className="text-black text-sm lg:text-large font-semibold">
           We use best practices in our process and development activities, and
           available team always work on the utilities to develope for our team ,
           helping them to imporove their productivity collaborating in team
@@ -26,10 +26,13 @@ const Services = () => {
         </button> */}
       </div>
 
-      <div className="flex  lg:py-[20px] items-center w-full lg:w-1/2 flex-wrap">
+      <div className="flex flex-col gap-2 lg:flex-row lg:py-[1px] w-full customShadow">
         {servicegrids.map((grid) => {
           return (
-            <div key={grid.label} className="w-full lg:w-1/2">
+            <div
+              key={grid.label}
+              className=" w-full justify-center customShadow"
+            >
               <ServiceGrid {...grid} />
             </div>
           );
