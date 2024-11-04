@@ -5,6 +5,7 @@ const ProductGrid = ({ icon, text, label, heading }) => {
     <div className="flex flex-col lg:flex-row gap-2 lg:w-[90%]  items-center w-full bg-slate-200 rounded-lg p-4">
       <img
         src={icon}
+        alt="product image"
         className="bg-green-400 rounded-full w-full lg:w-[20%]  hover:bg-green-500 cursor-pointer"
       ></img>
 

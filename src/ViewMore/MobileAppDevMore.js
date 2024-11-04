@@ -16,7 +16,11 @@ const MobileAppDevMore = () => {
           process,tools,testing,platforms,features and we need backend database
           to hadle the live data.
         </h1>
-        <img src={madev} className="h-fit w-[50%] lg:w-[70%] m-10 rounded-md" />
+        <img
+          src={madev}
+          alt="mobile add dev Image"
+          className="h-fit w-[50%] lg:w-[70%] m-10 rounded-md"
+        />
       </div>
 
       <div className="w-full lg:w-[75%] flex flex-col flex-wrap items-center justify-center m-5 gap-5">

@@ -7,6 +7,7 @@ const PeopleGrid = ({ image, about, name, profile }) => {
       {image ? (
         <img
           src={image}
+          alt="people image"
           className="bg-green-400 rounded-full w-1/2 border-green-800 border-2 hover:bg-green-500 cursor-pointer"
         ></img>
       ) : (

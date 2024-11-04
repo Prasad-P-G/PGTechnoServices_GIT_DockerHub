@@ -48,6 +48,7 @@ const ServicesMore = () => {
             <h1 className="font-bold text-sm lg:text-xl p-2">{grid.heading}</h1>
             <img
               src={grid.icon}
+              alt="service image"
               className="bg-green-400 rounded-full w-1/2 hover:bg-green-500 cursor-pointer"
             ></img>
             <h1 className="font-normal text-xs lg:text-sm p-2">{grid.text}</h1>
