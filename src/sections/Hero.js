@@ -40,7 +40,7 @@ const Hero = () => {
 
       {/* <div className="flex justify-center items-center w-1/2 px-5 py-5 object-cover"> */}
       <div className="flex justify-center items-center w-fit px-5 py-5 object-cover">
-        <img src={heroimage} alt="hero Image" className="lg:w-1/2"></img>
+        <img src={heroimage} className="lg:w-1/2"></img>
       </div>
     </section>
   );

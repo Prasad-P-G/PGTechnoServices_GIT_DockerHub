@@ -11,6 +11,9 @@ import si from "../assets/software services and mentainance/SI.jpeg";
 import spm from "../assets/software services and mentainance/spm.jpeg";
 import ssAm from "../assets/software services and mentainance/SSAndM.jpeg";
 
+import ewa from "../assets/Ecommerce Images Mobile and web/ecommerce-webapp.jpeg";
+import ema from "../assets/Ecommerce Images Mobile and web/mobileapps.jpeg";
+
 import client1 from "../assets/images/client1.png";
 import client2 from "../assets/images/client2.png";
 import client3 from "../assets/images/client3.png";
@@ -87,13 +90,13 @@ export const serviceMoregrids = [
 
 export const productgrids = [
   {
-    icon: ssm,
+    icon: ewa,
     heading: "E-Commerce web-Applications",
     text: "These will allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service",
     label: "View More",
   },
   {
-    icon: mad,
+    icon: ema,
     heading: "E-Commerce Mobile Apps",
     text: "We Develope Mobile apps as per customer requirements covering most of the features to target their bussiness in hand. Now days Smartphone users are increasing by leaps and bounds. According to Market Statistics, currently billions of people worldwide use smartphones to achieve their day-to-day needs, be it cab booking, online ticket purchasing, reading news, shopping, and managing businesses or Mobile Commerce",
     label: "View More",

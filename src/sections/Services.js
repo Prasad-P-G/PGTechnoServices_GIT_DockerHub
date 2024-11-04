@@ -1,7 +1,6 @@
 import React from "react";
 //import { servicegrids } from "../exports";
 import ServiceGrid from "../components/ServiceGrid";
-import ssm from "../assets/icons/ssm.png";
 import { servicegrids } from "../exports";
 
 const Services = () => {

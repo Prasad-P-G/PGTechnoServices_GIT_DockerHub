@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { FaPhone } from "react-icons/fa6";
-import { fb } from "../assets/icons/fb.png";
-import { insta } from "../assets/icons/insta.png";
-import sms from "../assets/icons/sms.png";
-import { twitter } from "../assets/icons/twitter.png";
 import { FaMailBulk } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { TextField, Button } from "@mui/material";
 import { RecaptchaVerifier } from "firebase/auth";
 import { auth } from "../firebase/setup";
 import { signInWithPhoneNumber } from "firebase/auth";
@@ -24,7 +18,6 @@ function Contact() {
   const [mobileNumber, setMobileNumber] = useState();
   const [flag, setFlag] = useState(true);
   const [OTP, setOTP] = useState();
-  const [otpRecieved, setOtpRecieved] = useState(true);
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
 
