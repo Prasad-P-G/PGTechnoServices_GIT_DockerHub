@@ -274,7 +274,15 @@ const Header = () => {
               <ul className="flex flex-col justify-center  items-center">
                 <li className="text-xl text-white font-semibold hover:bg-green-600 hover:text-white w-full text-center border-b justify-center py-3">
                   {/* <a href="/">Home</a> */}
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink
+                    to="/"
+                    onClick={() => {
+                      toggleMenu();
+                      toggleIcon();
+                    }}
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li className="text-xl text-white font-semibold hover:bg-green-600 hover:text-white w-full text-center border-b py-3">
                   {/* <a
