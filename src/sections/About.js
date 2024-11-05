@@ -5,10 +5,10 @@ import PeopleGrid from "../components/PeopleGrid";
 const About = () => {
   return (
     <section id="about" className="w-full flex flex-col gap-2 p-5 lg:pt-[2px]">
-      <h1 className="text-center font-bold text-4xl text-blue-900 py-5">
+      <h1 className="text-center font-bold  text-2xl lg:text-4xl text-blue-900 py-1 lg:py-5">
         About Team Activists
       </h1>
-      <span className="lg:px-20">
+      <span className="lg:px-20 text-[14px] lg:text-[16px]">
         Founder has taken the initiation of this IT and services firm
         horzontally alligned with their other operations sectors. As a team we
         set the Vision and directions of the company. So that, we can take up
@@ -19,7 +19,7 @@ const About = () => {
         upcoming technologies and innovatives done by experts , which helps in
         improving ongoing assignemnts and helps in delivering quality work.
       </span>
-      <span className="lg:px-20">
+      <span className="lg:px-20 text-[14px] lg:text-[16px]">
         We have young and dynamic operational team with technical expertises,
         and have more than 15 years of industrial experience , worked with more
         than 25 clients from all over the globe. The team has high influenced

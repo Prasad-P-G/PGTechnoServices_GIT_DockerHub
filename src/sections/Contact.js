@@ -179,9 +179,9 @@ function Contact() {
       id="contact"
       className="w-full bg-slate-200 flex flex-col lg:flex-row gap-5  justify-center"
     >
-      <div className="flex justify-center items-center w-full lg:w-3/4 flex-col lg:flex-row bg-white rounded-lg px-8 lg:m-1  gap-5 z-20">
+      <div className="flex justify-center lg:items-center w-full lg:w-3/4 flex-col lg:flex-row bg-white rounded-lg px-8 lg:m-1  gap-5 z-20">
         <div className="flex justify-center items-start flex-col gap-4 w-full">
-          <h1 className="text-green-600 font-bold text-[25px]">
+          <h1 className="text-green-600 font-bold text-[18px] pt-5 lg:text-[25px]">
             Contact Information
           </h1>
 
@@ -189,10 +189,10 @@ function Contact() {
             id="phone"
             className="flex justify-center items-center gap-4 text-lg font-semibold text-gray-600"
           >
-            <span className="bg-green-400 p-3 rounded-full">
+            <span className="bg-green-400 p-2 rounded-full">
               <FaPhone />
             </span>
-            +91 9333026364
+            <span className="text-sm lg:text-lg">+91 9333026364</span>
           </div>
 
           <div
@@ -200,20 +200,24 @@ function Contact() {
             className="flex justify-center items-center gap-4 
              font-semibold text-gray-600"
           >
-            <span className="bg-green-400 p-3 rounded-full text">
+            <span className="bg-green-400 p-2 rounded-full text">
               <FaMailBulk />
             </span>
-            admin@pgtechnoservices.com
+            <span className="text-sm lg:text-lg">
+              admin@pgtechnoservices.com
+            </span>
           </div>
 
           <div
             id="address"
             className="flex justify-center items-center gap-4 text-lg font-semibold text-gray-600"
           >
-            <span className="bg-green-400 p-3 rounded-full">
+            <span className="bg-green-400 p-2 rounded-full">
               <FaMapMarkerAlt />
             </span>
-            Bangalore,Karnataka,India-560040
+            <span className="text-sm lg:text-lg">
+              Bangalore,Karnataka,India-560040
+            </span>
           </div>
 
           <div

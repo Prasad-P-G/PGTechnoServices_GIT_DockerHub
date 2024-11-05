@@ -7,7 +7,7 @@ const ServiceGrid = ({ icon, text, label, heading }) => {
       <img
         src={icon}
         alt="service image"
-        className="bg-green-400 rounded-full w-full hover:bg-green-500 cursor-pointer"
+        className="bg-green-400 rounded-full w-[75%] lg:w-full hover:bg-green-500 cursor-pointer"
       ></img>
 
       <h1 className="text-2xl lg:text-3xl text-center customShadow  text-green-600 font-semibold ">

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Hero = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-between w-full items-center gap-2 bg-slate-100 h-auto lg:h-3/4">
-      <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-10 lg:px-20 lg:py-10">
+      <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-5 lg:px-20 lg:py-10">
         <div className="text-xl lg:text-5xl font-bold bg-green-500 text-white lg:p-10">
           <ReactTyped
             strings={["Research.", "Innovation.", "Discover.", "Adoption."]}
@@ -26,7 +26,7 @@ const Hero = () => {
           many more
         </span>
 
-        <div className="flex justify-center items-center gap-7 mt-5">
+        <div className="flex justify-center items-center gap-2 mt-2">
           <NavLink to="/homemore">
             <button className="bg-green-800 text-white px-2 lg:px-4 py-2 rounded-md text-[18px] hover:bg-black cursor-pointer">
               View More
@@ -39,8 +39,8 @@ const Hero = () => {
       </div>
 
       {/* <div className="flex justify-center items-center w-1/2 px-5 py-5 object-cover"> */}
-      <div className="flex justify-center items-center w-fit px-5 py-5 object-cover">
-        <img src={heroimage} className="lg:w-1/2"></img>
+      <div className="flex justify-center lg:items-center lg:justify-start w-fit px-2 py-2 object-cover">
+        <img src={heroimage} className="w-1/2 rounded-lg lg:rounded-md"></img>
       </div>
     </section>
   );

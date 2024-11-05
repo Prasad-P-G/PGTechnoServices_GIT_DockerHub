@@ -6,7 +6,7 @@ const ProductGrid = ({ icon, text, label, heading }) => {
       <img
         src={icon}
         alt="product image"
-        className="bg-green-400 rounded-full w-full lg:w-[20%]  hover:bg-green-500 cursor-pointer"
+        className="bg-green-400 rounded-full w-[75%]  hover:bg-green-500 cursor-pointer"
       ></img>
 
       <h1 className=" w-full text-xl lg:text-2xl text-green-600 font-semibold ">

@@ -10,10 +10,10 @@ const Services = () => {
       className="w-full bg-slate-200 flex flex-col customShadow gap-2 h-auto px-7 py-4 lg:px-16 lg-py-8"
     >
       <div className="flex lg:py-[20px] flex-col gap-2 lg:w-1/2 customShadow">
-        <h1 className=" font-bold text-2xl lg:text-4xl text-white py-10 w-full bg-[#207FD2] text-center">
+        <h1 className=" font-bold text-2xl lg:text-4xl px-5 rounded-lg text-white py-5 w-fit bg-[#6AA9E1]  text-center">
           Our Services and activities
         </h1>
-        <p className="text-black text-sm lg:text-large font-semibold">
+        <p className=" text-sm lg:text-large text-slate-500">
           We use best practices in our process and development activities, and
           available team always work on the utilities to develope for our team ,
           helping them to imporove their productivity collaborating in team

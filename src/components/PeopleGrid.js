@@ -3,15 +3,15 @@ import { MdAccountCircle } from "react-icons/md";
 
 const PeopleGrid = ({ image, about, name, profile }) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-2 bg-slate-300 rounded-lg m-2 p-2 lg:p-4">
+    <div className="flex flex-col justify-center items-center gap-2 bg-slate-300 rounded-lg m-2 p-2 lg:p-4 ">
       {image ? (
         <img
           src={image}
           alt="people image"
-          className="bg-green-400 rounded-full w-1/2 border-green-800 border-2 hover:bg-green-500 cursor-pointer"
+          className="bg-green-400 rounded-full w-[25%] lg:w-1/2 border-green-800 border-2 hover:bg-green-500 cursor-pointer"
         ></img>
       ) : (
-        <div className="bg-green-400 rounded-full  text-6xl hover:bg-green-500 cursor-pointer">
+        <div className="bg-green-400 rounded-full  text-6xl hover:bg-green-500 cursor-pointer ">
           <MdAccountCircle />
         </div>
       )}
