@@ -16,7 +16,7 @@ const PeopleGrid = ({ image, about, name, profile }) => {
         </div>
       )}
 
-      <h1 className="text-xl lg:text-2xl text-center text-green-600 font-semibold ">
+      <h1 className="text-xl lg:text-2xl text-center text-green-600 font-semibold">
         {name}
       </h1>
       <h1 className="text-[18px] text-center text-black font-semibold">

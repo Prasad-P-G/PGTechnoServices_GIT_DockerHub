@@ -149,6 +149,13 @@ export const peoplegrids = [
     name: "Santosh B",
     profile: "Manager & Operationals",
   },
+  {
+    image: "",
+    about:
+      "18+ Years experience in Managing all our products on cloud services, and he is Azure certified person with deep knowledge on Azure cloud applications configurations",
+    name: "Satish Modipalli",
+    profile: "Technical Manager and Azure Cloud Service professional",
+  },
 
   {
     image: "",
