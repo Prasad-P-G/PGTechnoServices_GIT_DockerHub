@@ -13,6 +13,8 @@ import { signInWithPhoneNumber } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import validator from "validator";
+import { Dots } from "react-activity";
+import "react-activity/dist/library.css";
 
 function Contact() {
   const [mobileNumber, setMobileNumber] = useState();
@@ -20,6 +22,7 @@ function Contact() {
   const [OTP, setOTP] = useState();
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const [activityFlag, setActivityFlag] = useState(false);
 
   const [userData, setuserData] = useState({
     name: "",
@@ -64,6 +67,8 @@ function Contact() {
 
   const submitUserDetails = async () => {
     try {
+      setActivityFlag(true);
+      setFlag(true);
       console.log("User Details==>", {
         ...userData,
         phoneNumber: "+91" + userData.phoneNumber,
@@ -103,6 +108,8 @@ function Contact() {
 
       if (responseData.success) {
         toast.success(responseData.message);
+        setActivityFlag(false);
+        setFlag(false);
         navigate("/");
       }
       if (!responseData.success) {
@@ -131,7 +138,7 @@ function Contact() {
   };
 
   const hanldeMobileNumber = (e) => {
-    if (e.target.value.length > 10) {
+    if (e.target.value.length > 13) {
       alert(
         "Please try entering valid Mobile Number, Should not exceed 10 numbers",
         console.log(mobileNumber.length)
@@ -139,9 +146,7 @@ function Contact() {
       setPhoneError(
         "Please try entering valid Mobile Number, Should not exceed 10 numbers"
       );
-      setPhoneError(
-        "Please try entering valid Mobile Number, Should not exceed 10 numbers"
-      );
+
       setFlag(true);
       //setMobileNumber(null);
     } else {
@@ -149,6 +154,7 @@ function Contact() {
       setFlag(true);
     }
     if (e.target?.value.length == 10) {
+      setPhoneError("");
       if (emailError?.length === 0) {
         setFlag(false);
         setEmailError("");
@@ -234,42 +240,60 @@ function Contact() {
         </div>
 
         <div className="flex flex-col items-center justify-center  gap-2 w-full lg:py-10">
-          <div className="flex flex-row w-full gap-2">
+          <div className="flex flex-col w-full gap-2">
             <input
               type="text"
               placeholder="Enter your name"
               name="name"
               value={userData.name}
               onChange={handleOnChange}
-              className="px-4 py-4 border-2 border-green-500 rounded-lg text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800"
+              className={`px-4 py-4 border-2 rounded-lg text-[14px]   lg:text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800 ${
+                userData.name?.length < 5
+                  ? " border-red-500"
+                  : " border-green-500"
+              }`}
             ></input>
-            <span
-              style={{
-                fontWeight: "bold",
-                color: "red",
-              }}
-            >
-              {nameError}
-            </span>
+            <>
+              {nameError && (
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    color: "red",
+                    fontSize: "12px",
+                  }}
+                >
+                  {nameError}
+                </span>
+              )}
+            </>
           </div>
 
-          <div className="flex flex-row w-full gap-2">
+          <div className="flex flex-col w-full gap-2">
             <input
               type="email"
               name="email"
               value={userData.email}
               onChange={handleOnChange}
               placeholder="Enter your email"
-              className="px-4 py-4 border-2 border-green-500 rounded-lg text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800"
+              className={`px-4 py-4 border-2 border-green-500 rounded-lg text-[14px]   lg:text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800  ${
+                userData.email?.length === 0
+                  ? " border-red-500"
+                  : " border-green-500"
+              }`}
             ></input>
-            <span
-              style={{
-                fontWeight: "bold",
-                color: "red",
-              }}
-            >
-              {emailError}
-            </span>
+            <>
+              {emailError && (
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    color: "red",
+                    fontSize: "12px",
+                  }}
+                >
+                  {emailError}
+                </span>
+              )}
+            </>
           </div>
 
           <div className="flex flex-row w-fit">
@@ -301,7 +325,7 @@ function Contact() {
             ></TextField>
           </div> */}
 
-          <div className=" flex gap-2 w-full">
+          <div className=" flex flex-col gap-2 w-full">
             <input
               type="number"
               placeholder="Enter 10 digit moible number"
@@ -310,21 +334,30 @@ function Contact() {
               value={userData.phoneNumber}
               onChange={handleOnChange}
               className={`px-4 py-4 border-2 ${
-                mobileNumber?.length > 10
+                userData?.phoneNumber.length > 10
                   ? "border-red-600"
                   : "border-green-500"
-              }  rounded-lg text-[18px] bg-slate-100 focus:outline-none w-full ${
+              }  rounded-lg text-[14px]   lg:text-[18px] bg-slate-100 focus:outline-none w-full ${
                 flag ? "focus:border-red-400" : "focus:border-green-800"
-              } `}
+              } ${
+                userData.phoneNumber?.length < 10
+                  ? " border-red-500"
+                  : " border-green-500"
+              }`}
             ></input>
-            <span
-              style={{
-                fontWeight: "bold",
-                color: "red",
-              }}
-            >
-              {phoneError}
-            </span>
+            <>
+              {phoneError && (
+                <span
+                  style={{
+                    fontWeight: "bold",
+                    color: "red",
+                    fontSize: "12px",
+                  }}
+                >
+                  {phoneError}
+                </span>
+              )}
+            </>
             {/* <button
               className="bg-orange-500 w-full"
               onClick={verifyMobileNumber}
@@ -348,7 +381,7 @@ function Contact() {
           )} */}
 
           <textarea
-            className="px-4 py-4 border-2 border-green-500 rounded-lg text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800"
+            className="px-4 py-4 border-2 border-green-500 rounded-lg text-[14px]   lg:text-[18px] bg-slate-100 focus:outline-none w-full focus:border-green-800"
             cols={30}
             rows={5}
             name="desc"
@@ -356,21 +389,48 @@ function Contact() {
             onChange={handleOnChange}
             placeholder="Enter your message, including your requiements related to technology services or corporate training"
           ></textarea>
-          {mobileNumber?.length === 10 && flag === false ? (
-            <button
-              className="bg-green-700 text-white px-4 py-3 w-2/3 rounded-lg "
-              disabled={false}
-              onClick={submitUserDetails}
-            >
-              SUBMIT
-            </button>
+          {mobileNumber?.length === 10 &&
+          userData.name.length >= 5 &&
+          emailError.length === 0 &&
+          activityFlag === false ? (
+            <>
+              <button
+                className="bg-green-700 text-white px-4 py-3 w-2/3 rounded-lg "
+                disabled={false}
+                onClick={submitUserDetails}
+              >
+                SUBMIT
+              </button>
+              {activityFlag && (
+                <>
+                  <div className="text-sm lg:text-xl text-green-700">
+                    <Dots
+                      className="text-sm lg:text-xl text-green-700"
+                      size={25}
+                    ></Dots>
+                  </div>
+                </>
+              )}
+            </>
           ) : (
-            <button
-              className="bg-gray-400 text-white px-4 py-3 w-2/3 rounded-lg "
-              disabled={true}
-            >
-              SUBMIT
-            </button>
+            <>
+              <button
+                className="bg-gray-400 text-white px-4 py-3 w-2/3 rounded-lg "
+                disabled={true}
+              >
+                SUBMIT
+              </button>
+              {activityFlag && (
+                <>
+                  <div className="text-sm lg:text-xl text-green-700">
+                    <Dots
+                      className="text-sm lg:text-xl text-green-700"
+                      size={25}
+                    ></Dots>
+                  </div>
+                </>
+              )}
+            </>
           )}
         </div>
       </div>
