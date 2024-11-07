@@ -50,7 +50,8 @@ const Header = () => {
     const repsonse = await fetch(url);
     const currentAddress = await repsonse.json();
     setCurrentLocation(currentAddress.results[0]?.formatted);
-    console.log(currentAddress.results[0]?.formatted);
+    console.log(currentAddress.results[0]);
+    console.log("My Current Location", currentAddress);
   };
 
   const getCurrentLocation = async () => {
