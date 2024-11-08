@@ -42,7 +42,7 @@ const ServicesMore = () => {
         return (
           <div
             key={grid.label}
-            className="w-full flex flex-col items-center justify-center lg:w-[25%] bg-slate-300"
+            className="w-full flex flex-col items-center justify-center lg:w-[25%] bg-slate-300 rounded-2xl"
           >
             {/* <ServiceGrid {...grid} /> */}
             <h1 className="font-bold text-sm lg:text-xl p-2">{grid.heading}</h1>
@@ -51,7 +51,9 @@ const ServicesMore = () => {
               alt="service image"
               className="bg-green-400 rounded-full w-1/2 hover:bg-green-500 cursor-pointer"
             ></img>
-            <h1 className="font-normal text-xs lg:text-sm p-2">{grid.text}</h1>
+            <h1 className="font-normal text-slate-800 text-center text-xs lg:text-sm p-2">
+              {grid.text}
+            </h1>
           </div>
         );
       })}

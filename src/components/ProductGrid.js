@@ -12,7 +12,9 @@ const ProductGrid = ({ icon, text, label, heading }) => {
       <span className=" text-lg w-full lg:w-[30%] text-center lg:text-2xl rounded-b-2xl lg:rounded-r-2xl text-white font-semibold bg-gray-700 opacity-1 p-3">
         {heading}
       </span>
-      <h1 className="text-[18px] w-full lg:w-[60%]  text-slate-500">{text}</h1>
+      <h1 className="text-[14px] lg:text-[16px]  w-full lg:w-[60%] text-center text-slate-500">
+        {text}
+      </h1>
       {/* <p className="bg-green-800 text-white px-4 py-2 rounded-md hover:bg-black hover:text-white cursor-pointer">
         {label}
       </p> */}

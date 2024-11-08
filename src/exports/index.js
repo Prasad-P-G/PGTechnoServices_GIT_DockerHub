@@ -13,6 +13,10 @@ import ssAm from "../assets/software services and mentainance/SSAndM.jpeg";
 
 import ewa from "../assets/Ecommerce Images Mobile and web/ecommerce-webapp.jpeg";
 import ema from "../assets/Ecommerce Images Mobile and web/mobileapps.jpeg";
+import iot from "../assets/Ecommerce Images Mobile and web/IOT.png";
+import wDesing from "../assets/Ecommerce Images Mobile and web/wdesign.png";
+import apiDev from "../assets/Ecommerce Images Mobile and web/api.png";
+import ctrain from "../assets/Ecommerce Images Mobile and web/ctrain.png";
 
 import client1 from "../assets/images/client1.png";
 import client2 from "../assets/images/client2.png";
@@ -102,33 +106,27 @@ export const productgrids = [
     label: "View More",
   },
   {
-    icon: api,
-    heading: "Rest API & Website Development",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    icon: apiDev,
+    heading: "Rest API Development",
+    text: "We have been inloved in developing rest APIs for our customer services. We choose technologies based on customer requirements to develope APIs, Our few of the services built using Node Express js , .Net Web-API, .Net Core Web-API, PHP , wcf and others",
     label: "View More",
   },
   {
-    icon: websitedesign,
+    icon: wDesing,
     heading: "Responsive Web Designing",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    text: "We have a team to create responsive and dynamic Websites/Web applications using latest technologies on mobie and other devices",
     label: "View More",
   },
   {
-    icon: st,
-    heading: "On-Job Software Training",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    icon: iot,
+    heading: "Embeded software Development",
+    text: "We have also involved in building IOT for real time usage of industrial devices like QR Code Scanners,BarCode Scanners, Turnstile Machines,household devices, and also doing innovative work on IOTs to levelege current new technologies into practice",
     label: "View More",
   },
   {
-    icon: websitedesign,
-    heading: "Responsive Web Designing",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-    label: "View More",
-  },
-  {
-    icon: st,
-    heading: "On-Job Software Training",
-    text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+    icon: ctrain,
+    heading: "Corporate Training",
+    text: "We are also involved in training the employees of organizations starting from small team to bigger in many technoliges as per their current market requirements. We train to employees become precious assets to their company with new technologies and other soft spoken skills",
     label: "View More",
   },
 ];
