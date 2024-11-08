@@ -33,7 +33,29 @@ const Header = () => {
 
   useEffect(() => {
     getCurrentLocation();
+    postCurrentLocation();
   }, [currentLocation]);
+
+  const postCurrentLocation = async () => {
+    try {
+      const jsonUserData = await fetch(
+        "https://userdetailstwiliomongoosenodejsserver-hq90lb7s.b4a.run/api/userLocationDetails",
+        {
+          method: "post",
+          headers: {
+            "content-type": "application/json",
+          },
+
+          body: JSON.stringify({ location: currentLocation }),
+        }
+      );
+      const responseData = await jsonUserData.json();
+
+      console.log("api location result", responseData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const getCurrentAddress = async (latitude, longitude) => {
     console.log(latitude, longitude);
@@ -52,6 +74,10 @@ const Header = () => {
     setCurrentLocation(currentAddress.results[0]?.formatted);
     console.log(currentAddress.results[0]);
     console.log("My Current Location", currentAddress);
+  };
+
+  const userUserLocationStore = () => {
+    //store currectLocatin of the visitor
   };
 
   const getCurrentLocation = async () => {
