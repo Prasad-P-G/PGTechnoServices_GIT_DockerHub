@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const ServiceGrid = ({ icon, text, label, heading }) => {
   return (
-    <div className="flex w-full flex-col customShadow  border-2 items-center gap-2 bg-white rounded-lg m-2 p-2 lg:p-2">
+    <div className="flex w-full flex-col customShadow  border-2 items-center gap-2 bg-white rounded-lg p-2">
       <img
         src={icon}
         alt="service image"

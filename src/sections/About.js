@@ -26,7 +26,7 @@ const About = () => {
         technical people to work around with our innovations.
       </span>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-5 justify-center items-center w-fit">
+      <div className="flex flex-col lg:grid lg:grid-cols-5 justify-center  w-fit">
         {/* <div className="flex justify-center flex-row flex-wrap items-center"> */}
         {peoplegrids.map((grid) => {
           return (

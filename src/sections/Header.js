@@ -122,7 +122,7 @@ const Header = () => {
   return (
     <>
       <ToastContainer />
-      <section className="w-full bg-black text-white flex justify-between items-center px-8 py-6 sticky top-0 z-40">
+      <section className="w-full bg-black text-white flex justify-between items-center px-8 py-2 sticky top-0 z-40">
         <div className="flex flex-col gap-2">
           <NavLink to="/">
             <h1 className="text-2xl lg:text-3xl font-bold text-white">
@@ -145,7 +145,7 @@ const Header = () => {
               </span>
             )}
           </div>
-          <div>
+          <div className="px-5">
             <span className="font-semibold text-yellow-500  text-xs lg:text-sm">
               <h1>Total visitors : {visitorCount}</h1>
             </span>

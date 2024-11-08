@@ -179,7 +179,7 @@ function Contact() {
       id="contact"
       className="w-full bg-slate-200 flex flex-col lg:flex-row gap-5  justify-center"
     >
-      <div className="flex justify-center lg:items-center w-full lg:w-3/4 flex-col lg:flex-row bg-white rounded-lg px-8 lg:m-1  gap-5 z-20">
+      <div className="flex justify-center w-full lg:w-3/4 flex-col lg:flex-row bg-white rounded-lg px-8 lg:m-1  gap-5 z-20">
         <div className="flex justify-center items-start flex-col gap-4 w-full">
           <h1 className="text-green-600 font-bold text-[18px] pt-5 lg:text-[25px]">
             Contact Information
@@ -243,7 +243,7 @@ function Contact() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center  gap-2 w-full lg:py-10">
+        <div className="flex flex-col items-center justify-center  gap-2 w-full lg:py-5">
           <div className="flex flex-col w-full gap-2">
             <input
               type="text"

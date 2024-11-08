@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-full bg-slate-200 flex flex-col customShadow gap-2 h-auto px-7 py-4 lg:px-16 lg-py-8"
+      className="w-full bg-slate-200 flex flex-col customShadow gap-2 px-7 py-2 lg:px-16 lg-py-3 max-h-full"
     >
       <div className="flex lg:py-[20px] flex-col gap-2 lg:w-1/2 customShadow">
         <h1 className=" font-bold text-2xl lg:text-4xl px-5 rounded-lg text-white py-5 w-fit bg-[#6AA9E1]  text-center">

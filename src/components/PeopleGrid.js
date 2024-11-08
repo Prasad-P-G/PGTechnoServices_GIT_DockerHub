@@ -3,7 +3,7 @@ import { MdAccountCircle } from "react-icons/md";
 
 const PeopleGrid = ({ image, about, name, profile }) => {
   return (
-    <div className="flex flex-col justify-center items-center gap-2 bg-slate-300 rounded-lg m-2 p-2 lg:p-4 ">
+    <div className="flex flex-col justify-center items-center gap-2 bg-slate-300 rounded-lg m-2 p-2">
       {image ? (
         <img
           src={image}

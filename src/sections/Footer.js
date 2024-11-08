@@ -9,15 +9,17 @@ const Footer = () => {
   return (
     <section
       className="w-full bg-black text-white flex flex-col lg:flex-row  
-     gap-5 lg:gap-2 px-10 py-8  lg:px-20 lg:py-5 lg:mt-5 mt-5"
+     gap-1 lg:gap-2 px-10  lg:px-20 lg:py-1 mt-2"
     >
-      <div className="flex flex-col justify-center items-start gap-1 w-full lg:w-[40%]">
-        <h1 className="text-green-600 font-bold text-2xl">PG TECHNO DOMAIN</h1>
-        <p className="text-xs text-slate-200 ">SINCE 2021</p>
-        <p className="text-xs text-slate-200 ">
+      <div className="flex flex-col justify-center items-start w-full lg:w-[40%]">
+        <h1 className="text-green-600 font-bold text-[16px]">
+          PG TECHNO DOMAIN
+        </h1>
+        <p className="text-[10px] text-slate-200 ">SINCE 2021</p>
+        <p className="text-sm text-slate-200 ">
           Innovate. Learn. Discover. Research
         </p>
-        <div className="flex justify-center items-center gap-4 mt-2" id="logos">
+        <div className="flex justify-center items-center gap-2 mt-2" id="logos">
           <span className=" p-1 rounded-full cursor-pointer hover:bg-green-600 text-2xl">
             <FaFacebook />
           </span>
@@ -33,9 +35,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row justify-center items-center  w-full lg:w-50%  lg:p-1">
+      {/* <div className="flex flex-row justify-center items-center  w-full lg:w-50%  lg:p-1">
         <ul className="flex flex-row justify-center items-center gap-5 px-10">
-          {/* <h1 className="text-xl font-semibold"> PAGES</h1> */}
           <li className="text-slate-300 cursor-pointer hover:bg-green-600 p-1">
             <NavLink to="/"> Home</NavLink>
           </li>
@@ -52,7 +53,7 @@ const Footer = () => {
             <NavLink to="/contact"> Contact</NavLink>
           </li>
         </ul>
-      </div>
+      </div> */}
     </section>
   );
 };
