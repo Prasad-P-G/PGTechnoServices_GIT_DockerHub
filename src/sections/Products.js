@@ -6,10 +6,10 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="w-full bg-slate-100 flex flex-col lg:py-[5px] justify-center  
+      className="w-full bg-slate-100 flex flex-col p-5 lg:p-10  justify-center  
         h-fit px-5 py-2 "
     >
-      <h1 className=" flex font-bold text-2xl lg:text-4xl px-5 rounded-lg text-white py-5 w-fit  bg-[#6AA9E1]  text-center">
+      <h1 className=" flex font-bold text-2xl lg:text-4xl px-5 rounded-lg text-white p-5 lg:p-5 w-fit  bg-[#6AA9E1]  text-center">
         Our Product Experiements
       </h1>
 

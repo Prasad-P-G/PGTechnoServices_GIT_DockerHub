@@ -14,6 +14,7 @@ const Header = () => {
   const [menuClass, setMenuClass] = useState("");
   const [toggle, setToggle] = useState(false);
   const [currentLocation, setCurrentLocation] = useState("");
+  const [visitorCount, setVisitorCount] = useState("");
   //const [isItemActive, setIsActive] = useState(true);
 
   const toggleMenu = () => {
@@ -51,7 +52,12 @@ const Header = () => {
       );
       const responseData = await jsonUserData.json();
 
+      if (responseData?.message?.no) {
+        setVisitorCount(responseData.message.no);
+      }
+
       console.log("api location result", responseData);
+      console.log("No of visitors", responseData.message.no);
     } catch (error) {
       console.log(error);
     }
@@ -117,18 +123,13 @@ const Header = () => {
     <>
       <ToastContainer />
       <section className="w-full bg-black text-white flex justify-between items-center px-8 py-6 sticky top-0 z-40">
-        <NavLink to="/">
-          <h1 className="text-2xl lg:text-3xl font-bold text-white">
-            PG TECHNO DOMAIN
-          </h1>
+        <div className="flex flex-col gap-2">
+          <NavLink to="/">
+            <h1 className="text-2xl lg:text-3xl font-bold text-white">
+              PG TECHNO DOMAIN
+            </h1>
+          </NavLink>
           <div className="flex flex-row w-full items-center justify-center gap-2">
-            {/* <ReactTyped
-            className="text-xs lg:text-sm"
-            strings={["Current Location."]}
-            typeSpeed={70}
-            backSpeed={50}
-            loop
-          ></ReactTyped> */}
             <span className="text-green-600">
               <FaLocationDot />
             </span>
@@ -144,7 +145,18 @@ const Header = () => {
               </span>
             )}
           </div>
-        </NavLink>
+          <div>
+            <span className="font-semibold text-yellow-500  text-xs lg:text-sm">
+              <h1>Total visitors : {visitorCount}</h1>
+            </span>
+          </div>
+        </div>
+
+        {/* <div>
+          <span className="font-semibold text-yellow-500-500  text-xs lg:text-sm">
+            <h1> {visitorCount}</h1>
+          </span>
+        </div> */}
         <div className="hidden lg:flex justify-end items-center gap-2">
           <ul className="flex justify-center items-center gap-3">
             <li>
