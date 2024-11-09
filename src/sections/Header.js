@@ -132,7 +132,7 @@ const Header = () => {
           {/* <h1 className="text-2xl lg:text-3xl font-bold text-white">
               BPG TECHNO DOMAIN
             </h1> */}
-          <div className="flex flex-col  justify-center gap-2">
+          <div className="flex flex-col  justify-center gap-1">
             <div className="flex flex-row items-center gap-2">
               <span className="text-green-600 text-xl lg:text-3xl">
                 <FaLocationDot />
@@ -150,7 +150,7 @@ const Header = () => {
               )}
             </div>
 
-            <span className="font-semibold text-yellow-500 p-2  text-xs lg:text-sm">
+            <span className="font-semibold text-yellow-500 p-1  text-xs lg:text-sm">
               <h1>Total visitors : {visitorCount}</h1>
             </span>
           </div>
