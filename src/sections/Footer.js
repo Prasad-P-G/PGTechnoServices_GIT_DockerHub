@@ -13,7 +13,7 @@ const Footer = () => {
     >
       <div className="flex flex-col justify-center items-start w-full lg:w-[40%]">
         <h1 className="text-green-600 font-bold text-[16px]">
-          PG TECHNO DOMAIN
+          BPG TECHNO DOMAIN Private Limited
         </h1>
         <p className="text-[10px] text-slate-200 ">SINCE 2021</p>
         <p className="text-sm text-slate-200 ">

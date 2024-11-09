@@ -126,7 +126,7 @@ const Header = () => {
         <div className="flex flex-col gap-2">
           <NavLink to="/">
             <h1 className="text-2xl lg:text-3xl font-bold text-white">
-              PG TECHNO DOMAIN
+              BPG TECHNO DOMAIN
             </h1>
           </NavLink>
           <div className="flex flex-row w-full items-center justify-center gap-2">
