@@ -204,7 +204,7 @@ function Contact() {
               <FaMailBulk />
             </span>
             <span className="text-sm lg:text-lg">
-              admin@pgtechnoservices.com
+              admin@bpg.technodomain.com
             </span>
           </div>
 
@@ -216,7 +216,7 @@ function Contact() {
               <FaMapMarkerAlt />
             </span>
             <span className="text-sm lg:text-lg">
-              Bangalore,Karnataka,India-560040
+              Dharwad,Karnataka,India-580002
             </span>
           </div>
 
