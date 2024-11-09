@@ -12,9 +12,13 @@ const Footer = () => {
      gap-1 lg:gap-2 px-10  lg:px-20 lg:py-1 mt-2"
     >
       <div className="flex flex-col justify-center items-start w-full lg:w-[40%]">
-        <h1 className="text-green-600 font-bold text-[16px]">
-          BPG TECHNO DOMAIN Private Limited
-        </h1>
+        <div>
+          <h1 className="text-green-600 font-bold text-[16px]">
+            BPG TECHNO DOMAIN PRIVATE LIMITED
+          </h1>
+          <p className="text-[8px] text-green-300 font-thin">HELP YOUR IDEAS</p>
+        </div>
+
         <p className="text-[10px] text-slate-200 ">SINCE 2021</p>
         <p className="text-sm text-slate-200 ">
           Innovate. Learn. Discover. Research
