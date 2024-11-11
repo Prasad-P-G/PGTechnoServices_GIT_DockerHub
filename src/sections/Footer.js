@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <section
       className="w-full bg-black text-white flex flex-col lg:flex-row  
-     gap-1 lg:gap-2 px-10   lg:px-20 lg:py-1 my-2"
+     gap-1 lg:gap-2 px-10   lg:px-20 lg:py-1 mt-2"
     >
       <div className="flex flex-col justify-center items-start w-full lg:w-[40%]">
         <div>
