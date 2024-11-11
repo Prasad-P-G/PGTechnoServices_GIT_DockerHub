@@ -11,11 +11,11 @@ const Hero = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
     pauseOnFocus: false,
     pauseOnHover: true,
   };
@@ -78,7 +78,7 @@ const Hero = () => {
                     ></img>
                   )}
                 </div>
-                <h1 className="text-xl lg:text-2xl text-center text-green-600 font-semibold">
+                <h1 className="text-lg lg:text-xl text-center text-green-600 font-semibold">
                   {grid.heading}
                 </h1>
                 {/* <h1 className="text-xl lg:text-2xl text-center text-green-600 font-semibold">

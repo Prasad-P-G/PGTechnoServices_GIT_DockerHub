@@ -40,11 +40,11 @@ const About = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 3000,
+    speed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     pauseOnFocus: false,
     pauseOnHover: true,
   };
@@ -52,11 +52,11 @@ const About = () => {
   const settings1 = {
     dots: true,
     infinite: true,
-    speed: 3000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     pauseOnFocus: false,
     pauseOnHover: true,
   };

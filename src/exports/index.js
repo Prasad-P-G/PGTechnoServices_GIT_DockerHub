@@ -57,6 +57,42 @@ export const homegrids = [
     text: "We train existing and new employees on new applicable skills for their role or for business need in our workplace while performing their current activities. The training is not specific to any technologies.",
     label: "/products",
   },
+  {
+    icon: sm,
+    label: "/ServicesMore",
+    heading: "Software Mentainance",
+    text: "Software solutions and other domain technologies adoptions ,  go through many iterations, but failure to maintain them could lead to vulnerabilities and an inability to keep up with the competition.Wwe have experienced resources to guide the team in software maintenance in understanding the root causes and technologies , and also highlight the importance of software models and best practives for mentaining the software running without any failures ",
+  },
+  {
+    icon: spm,
+    label: "/ServicesMore",
+    heading: "Software Project Management",
+    text: "Our people are good at planning, scheduling, resource allocation, execution, tracking, and delivery of software and web projects. We use Agile Process to keep up with the increasing pace of business and iterate based on customer and stakeholder feedback. Execution and time management as per the budget is our mail goal in this process",
+  },
+  {
+    icon: crm,
+    label: "/ServicesMore",
+    heading: "Customer Relationship Management",
+    text: "We help in businesses manage their interactions with customers. The goal of our process is to improve customer relationships and grow their business and help our custmers too by better practices gained during this process",
+  },
+  {
+    icon: ssAm,
+    label: "/ServicesMore",
+    heading: "Software Support and Mentainance",
+    text: "Our team has well qualified professionals , and are designed to proactively handle the maintenance of software to ensure it is bug-free at deployment. They also follow the best software maintenance practices to make our customer software robust and secure",
+  },
+  {
+    icon: si,
+    label: "/ServicesMore",
+    heading: "System Integration",
+    text: "We do involve in combining different systems, software, and hardware into a single, functioning unit. The goal is to make the systems work together smoothly so they can share information and processes more efficiently. This Process will benefits in imporving efficiency , reduced human errors, increased revenue",
+  },
+  {
+    icon: osd,
+    label: "/ServicesMore",
+    heading: "Outsourcing software Development",
+    text: "We hire a third-party service provider to handle software development projects. The services can range from developing software for our company to managing business operations and also developing and maintaining software for our customers",
+  },
 ];
 
 export const servicegrids = [
