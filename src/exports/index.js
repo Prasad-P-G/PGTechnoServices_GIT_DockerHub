@@ -26,6 +26,39 @@ import client4 from "../assets/images/client4.png";
 import ceo from "../assets/images/CEO.JPG";
 import hr from "../assets/images/manasa.jpg";
 
+export const homegrids = [
+  {
+    icon: ssm,
+    heading: "Software Services & Mentainance",
+    text: "Our core activities includes Software maintenance,Software Project Management,Customer relationship management,Software support and maintenance,Outsourcing software development",
+    label: "/ServicesMore",
+  },
+  {
+    icon: mad,
+    heading: "Mobile Application Development",
+    text: "We create software for mobile devices, such as smartphones, tablets, and digital assistants",
+    label: "/MobileAppDevMore",
+  },
+  {
+    icon: api,
+    heading: "Rest API & Web Application Development",
+    text: "We have experience in developing Rest APIs using different cross platform technologies, which will help web applications more scalable , flexible and easily mentainable. Our goal is to adhere to customer technology requirements to develope webapplications and mobile applications and also we make sure , use of technologies who have larger community support in future mentainance.",
+    label: "/services",
+  },
+  {
+    icon: websitedesign,
+    heading: "Responsive Web Designing",
+    text: "We design websites to adapt to customers devices. The motive is to develope websites to retain their optimal usability and appearance regardless of the devices on which they are displayed",
+    label: "/services",
+  },
+  {
+    icon: st,
+    heading: "On-the-Job Training",
+    text: "We train existing and new employees on new applicable skills for their role or for business need in our workplace while performing their current activities. The training is not specific to any technologies.",
+    label: "/products",
+  },
+];
+
 export const servicegrids = [
   {
     icon: ssm,

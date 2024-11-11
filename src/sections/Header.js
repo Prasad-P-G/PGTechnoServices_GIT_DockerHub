@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
@@ -9,6 +9,7 @@ import { ReactTyped } from "react-typed";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/companyLogo/myCompanyLogo.jpg";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [iconToggle, seticonToggle] = useState(false);
@@ -17,7 +18,8 @@ const Header = () => {
   const [currentLocation, setCurrentLocation] = useState("");
   const [visitorCount, setVisitorCount] = useState("");
   //const [isItemActive, setIsActive] = useState(true);
-
+  const [locationPanel, setLocationPanel] = useState(true);
+  //let location = useLocation();
   const toggleMenu = () => {
     setToggle(!toggle);
   };
@@ -32,6 +34,19 @@ const Header = () => {
         : "transition-opacity ease-in-out duration-300 transform translate-y-full opacity-0"
     );
   }, [toggle]);
+
+  // useEffect(() => {
+  //   //console.log(location.pathname);
+  //   if (location === "/") {
+  //     setLocationPanel(true);
+  //   } else {
+  //     setLocationPanel(false);
+  //   }
+  // }, []);
+
+  const locationPanelVisibility = () => {
+    setLocationPanel(false);
+  };
 
   useEffect(() => {
     getCurrentLocation();
@@ -123,37 +138,42 @@ const Header = () => {
   return (
     <>
       <ToastContainer />
-      <section className="w-full bg-black text-white flex justify-between items-center px-4 py-2 sticky top-0 z-40">
-        <div className="flex lg:flex-row items-center justify-start">
-          <NavLink to="/" className=" w-[80%] lg:w-[30%]">
-            <img src={logo} className=" p-2 rounded-3xl w-[150px]"></img>{" "}
+      <section className="w-full bg-black text-white flex  justify-between items-center px-2 py-2 sticky top-0 z-40">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-start">
+          <NavLink to="/" className="flex  w-[60%] lg:w-[20%]">
+            <img
+              src={logo}
+              className=" p-2 rounded-3xl w-[80%] lg:w-[80%]"
+            ></img>{" "}
           </NavLink>
 
           {/* <h1 className="text-2xl lg:text-3xl font-bold text-white">
               BPG TECHNO DOMAIN
             </h1> */}
-          <div className="flex flex-col  justify-center gap-1">
-            <div className="flex flex-row items-center gap-2">
-              <span className="text-green-600 text-xl lg:text-3xl">
-                <FaLocationDot />
-              </span>
-              {currentLocation ? (
-                <span className="font-semibold text-orange-500  text-[12px] lg:text-[14px]">
-                  <h1>{currentLocation}</h1>
+          {locationPanel && (
+            <div className="flex flex-col  justify-center gap-1">
+              <div className="flex flex-row items-center gap-2">
+                <span className="text-green-600 text-xl lg:text-3xl">
+                  <FaLocationDot />
                 </span>
-              ) : (
-                <span className="font-semibold text-red-500  text-[12px] lg:text-[14px]">
-                  <h1>
-                    Location is Disabled, Plase Allow to access your location
-                  </h1>
-                </span>
-              )}
-            </div>
+                {currentLocation ? (
+                  <span className="font-semibold text-orange-500  text-[10px] lg:text-[14px]">
+                    <h1>{currentLocation}</h1>
+                  </span>
+                ) : (
+                  <span className="font-semibold text-red-500  text-[10px] lg:text-[14px]">
+                    <h1>
+                      Location is Disabled, Plase Allow to access your location
+                    </h1>
+                  </span>
+                )}
+              </div>
 
-            <span className="font-semibold text-yellow-500 p-1  text-xs lg:text-sm">
-              <h1>Total visitors : {visitorCount}</h1>
-            </span>
-          </div>
+              <span className="font-semibold text-yellow-500 p-1  text-[8px] lg:text-[12px]">
+                <h1>Total visitors : {visitorCount}</h1>
+              </span>
+            </div>
+          )}
 
           {/* <div className="px-1">
             <span className="font-semibold text-yellow-500  text-xs lg:text-sm">
@@ -177,11 +197,13 @@ const Header = () => {
               Home
             </a> */}
               <NavLink
-                onClick={handleLiClick("home")}
                 to="/"
                 className="text-lg text-slate-100 cursor-pointer rounded-md px-5 py-2 hover:bg-green-600 hover:text-white
                active:text-blue-900"
               >
+                {/* {({ isActive }) => {
+                 
+                }} */}
                 {({ isActive }) => (
                   <span
                     className={[
@@ -205,6 +227,7 @@ const Header = () => {
               <NavLink
                 onClick={handleLiClick("services")}
                 to="/services"
+                call={locationPanelVisibility}
                 className="text-lg text-slate-100 cursor-pointer rounded-md px-5 py-2 hover:bg-green-600 hover:text-white active:text-blue-900"
               >
                 {({ isActive }) => (
@@ -298,27 +321,38 @@ const Header = () => {
         </div>
         <div className="flex lg:hidden flex-col">
           {iconToggle ? (
-            <MdClose
-              className="text-2xl cursor-pointer"
-              onClick={() => {
-                toggleMenu();
-                toggleIcon();
-              }}
-            />
+            <div
+              className="bg-red-600 rounded-full text-white cursor-pointer
+            flex items-center justify-center"
+            >
+              <MdClose
+                className="text-2xl cursor-pointer"
+                onClick={() => {
+                  toggleMenu();
+                  toggleIcon();
+                }}
+              />
+            </div>
           ) : (
-            <RiMenu4Line
-              className="text-2xl cursor-pointer w-[30px]"
-              onClick={() => {
-                toggleMenu();
-                toggleIcon();
-              }}
-            />
+            <div
+              className="bg-green-500 rounded-full cursor-pointer
+             flex items-center justify-center"
+            >
+              {" "}
+              <RiMenu4Line
+                className="text-2xl cursor-pointer w-10 h-10 "
+                onClick={() => {
+                  toggleMenu();
+                  toggleIcon();
+                }}
+              />
+            </div>
           )}
 
           {toggle && (
             <div
               id="mob-menu"
-              className={`bg-green-500 text-white p-4 absolute top-20 right-0 w-1/2 ${menuClass}`}
+              className={`bg-green-500 text-white p-4 absolute top-0 left-0 w-1/2 ${menuClass}`}
             >
               <ul className="flex flex-col justify-center  items-center">
                 <li className="text-xl text-white font-semibold hover:bg-green-600 hover:text-white w-full text-center border-b justify-center py-3">

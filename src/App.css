@@ -5,6 +5,11 @@
   box-shadow: 5px 5px 10px rgb(51, 145, 176);
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: yellow;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
