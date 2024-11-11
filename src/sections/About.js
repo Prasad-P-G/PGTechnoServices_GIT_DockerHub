@@ -46,7 +46,6 @@ const About = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnFocus: false,
-    pauseOnHover: true,
   };
 
   const settings1 = {
@@ -58,7 +57,6 @@ const About = () => {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnFocus: false,
-    pauseOnHover: true,
   };
   // const settings = {
   //   dots: true,
@@ -100,7 +98,7 @@ const About = () => {
         {/* <div className="flex justify-center flex-row flex-wrap items-center"> */}
         <>
           <>
-            <div className="hidden lg:block  mt-2">
+            <div className="hidden lg:block  mt-2 customShadowAbout">
               <Slider
                 {...settings}
                 className="flex items-center justify-center max-h-[300px]"
@@ -144,7 +142,7 @@ const About = () => {
           </>
 
           <>
-            <div className="lg:hidden px-2">
+            <div className="lg:hidden px-2 customShadowAbout">
               <Slider
                 {...settings1}
                 className="flex items-center justify-center max-h-[310px]"

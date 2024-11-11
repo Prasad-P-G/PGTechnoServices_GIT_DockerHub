@@ -16,3 +16,23 @@
 .slick-slide > div {
   margin: 0 10px;
 }
+
+.customShadow {
+  box-shadow: 5px 5px 20px rgb(51, 145, 176);
+}
+
+.customShadowAbout {
+  box-shadow: 2px 5px 10px rgb(43, 170, 56);
+}
+
+.customShadowHome {
+  box-shadow: 5px 5px 10px rgb(32, 25, 15);
+}
+
+.customShadowHomeSlider {
+  box-shadow: 5px 5px 10px rgb(111, 147, 32);
+}
+
+.customShadowmad {
+  box-shadow: 5px 5px 10px rgb(88, 174, 194);
+}

@@ -12,6 +12,7 @@ import ApiMore from "./ViewMore/ApiMore";
 import MobileAppDevMore from "./ViewMore/MobileAppDevMore";
 import ServicesMore from "./ViewMore/ServicesMore";
 import WebsiteDesignMore from "./ViewMore/WebsiteDesignMore";
+import New from "./sections/New";
 // import { ToastContainer } from "react-toastify";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/products" element={<Products />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/New" element={<New />}></Route>
 
           <Route path="/homemore" element={<HomeMore />}></Route>
           <Route path="/ApiMore" element={<ApiMore />}></Route>

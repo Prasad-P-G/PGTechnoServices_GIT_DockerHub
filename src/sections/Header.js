@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/companyLogo/myCompanyLogo.jpg";
 import { useLocation } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 
 const Header = () => {
   const [iconToggle, seticonToggle] = useState(false);
@@ -317,6 +318,37 @@ const Header = () => {
                 )}
               </NavLink>
             </li>
+
+            <li>
+              {/* <a
+              href="#about"
+              className="text-lg text-slate-100 cursor-pointer rounded-md px-5 py-2 hover:bg-green-600 hover:text-white active:text-blue-900"
+            >
+              About
+            </a> */}
+
+              {/* New item */}
+              <NavLink
+                to="/New"
+                className="text-sm  text-slate-100 cursor-pointer px-5 py-2 hover:text-white active:text-blue-900"
+              >
+                {({ isActive }) => (
+                  <div className="flex flex-row gap-1 text-green-400">
+                    <FaStar />
+                    <span
+                      className={[
+                        "cursor-pointer font-semibold hover:text-oirOrange",
+                        isActive
+                          ? "bg-green-600 px-5 p-4  rounded-full text-white"
+                          : "text-red-400",
+                      ].join(" ")}
+                    >
+                      New
+                    </span>
+                  </div>
+                )}
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="flex lg:hidden flex-col">
@@ -430,16 +462,8 @@ const Header = () => {
                     About
                   </NavLink>
                 </li>
+
                 <li className="text-xl text-white font-semibold hover:bg-green-600 hover:text-white w-full py-3 text-center border-b">
-                  {/* <a
-                  href="#contact"
-                  onClick={() => {
-                    toggleMenu();
-                    toggleIcon();
-                  }}
-                >
-                  Contact
-                </a> */}
                   <NavLink
                     to="/contact"
                     onClick={() => {
@@ -449,6 +473,21 @@ const Header = () => {
                   >
                     {" "}
                     Contact
+                  </NavLink>
+                </li>
+
+                <li className="text-xl text-white font-semibold hover:bg-green-600 hover:text-white w-full py-3 text-center">
+                  <NavLink
+                    to="/New"
+                    onClick={() => {
+                      toggleMenu();
+                      toggleIcon();
+                    }}
+                  >
+                    <div className="flex flex-row items-center justify-center gap-1 text-orange-600">
+                      <FaStar />
+                      New
+                    </div>
                   </NavLink>
                 </li>
               </ul>

@@ -6,8 +6,8 @@ import { ReactTyped } from "react-typed";
 const MobileAppDevMore = () => {
   return (
     <div className="flex flex-col lg:flex-row w-full  ">
-      <div className="w-full gap-2 flex flex-col items-start mt-5 bg-slate-50 justify-start">
-        <h1 className="text-green-600 lg:text-3xl font-bold text-lg px-5 mt-5 text-center">
+      <div className="w-full gap-2 flex flex-col items-center mt-5 bg-slate-50 justify-start customShadowmad">
+        <h1 className="text-green-600 lg:text-3xl font-bold text-lg px-5 mt-5 text-center customShadowHome">
           Mobile Application Development
         </h1>
         <h1 className="px-2 font-sans w-full text-justify tex-sm lg:text-lg">
@@ -25,14 +25,14 @@ const MobileAppDevMore = () => {
 
       <div className="w-full lg:w-[75%] flex flex-col items-center  p-2 justify-center gap-5">
         <div className="rounded-2xl">
-          <h1 className=" flex items-center font-bold rounded-full bg-[#ccbfdd] p-2 text-lg lg:text-xl text-center">
-            <text className="text-blue-950 capitalize">
+          <h1 className=" flex items-center   rounded-r-md p-2 text-lg lg:text-xl text-center customShadowHome">
+            <text className="text-blue-950">
               Our Practicals and knowledge based Measures
             </text>
           </h1>
         </div>
 
-        <div className="flex flex-row gap-2 lg:gap-5 bg-[#85b0d5] items-center justify-between w-full p-2">
+        <div className="flex flex-row gap-2 lg:gap-5 bg-[#85b0d5] items-center justify-between w-full p-2 customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className="text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />
@@ -56,7 +56,7 @@ const MobileAppDevMore = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-2 lg:gap-5 p-2 bg-[#85b0d5] items-center justify-between w-full">
+        <div className="flex flex-row gap-2 lg:gap-5 p-2 bg-[#85b0d5] items-center justify-between w-full customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className=" text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />
@@ -74,19 +74,19 @@ const MobileAppDevMore = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5  bg-[#85b0d5] items-center justify-between w-full">
+        <div className="flex flex-row gap-5  bg-[#85b0d5] items-center justify-between w-full customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className=" text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />
             </span>
             <h1 className="font-bold  p-5 text-sm lg:text-xl">Testing</h1>
             {/* <ReactTyped
-              className="font-bold  p-5 text-lg lg:text-2xl"
-              strings={["Testing.", "Testing."]}
-              typeSpeed={20}
-              backSpeed={50}
-              loop
-            ></ReactTyped> */}
+                className="font-bold  p-5 text-lg lg:text-2xl"
+                strings={["Testing.", "Testing."]}
+                typeSpeed={20}
+                backSpeed={50}
+                loop
+              ></ReactTyped> */}
           </div>
           <div>
             <h1 className="font-sans text-slate-100 px-2">
@@ -97,7 +97,7 @@ const MobileAppDevMore = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center  w-full">
+        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center  w-full customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className=" text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />
@@ -112,7 +112,7 @@ const MobileAppDevMore = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center w-full ">
+        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center w-full customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className=" text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />
@@ -134,7 +134,7 @@ const MobileAppDevMore = () => {
           </div>
         </div>
 
-        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center justify-center w-full">
+        <div className="flex flex-row gap-5 bg-[#85b0d5] items-center justify-center w-full customShadowHomeSlider">
           <div className="flex flex-row items-center justify-center p-2">
             <span className=" text-2lg lg:text-4xl text-green-500">
               <FaFeatherPointed />

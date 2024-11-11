@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductGrid = ({ icon, text, label, heading }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-2 lg:gap-2 items-center lg:justify-start w-full bg-slate-200 rounded-lg p-4">
+    <div className="flex flex-col lg:flex-row gap-2 lg:gap-2 items-center lg:justify-start w-full bg-slate-200 rounded-lg p-4 customShadow">
       <img
         src={icon}
         alt="product image"

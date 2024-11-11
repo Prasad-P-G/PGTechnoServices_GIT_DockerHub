@@ -17,11 +17,10 @@ const Hero = () => {
     autoplay: true,
     autoplaySpeed: 1500,
     pauseOnFocus: false,
-    pauseOnHover: true,
   };
   return (
     <section className="flex flex-col lg:flex-row justify-between w-full items-center gap-2 h-auto lg:h-full">
-      <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-2 lg:px-20 lg:py-10">
+      <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-2 lg:px-20 lg:py-10 customShadowHome">
         <div className="text-xl lg:text-5xl font-bold bg-green-500 text-white lg:p-10">
           <ReactTyped
             strings={["Research.", "Innovation.", "Discover.", "Adoption."]}
@@ -59,7 +58,7 @@ const Hero = () => {
           src={heroimage}
           className="w-3/4 lg:w-1/2 rounded-lg lg:rounded-md"
         ></img> */}
-        <div className="hidden lg:block p-2 max-w-[400px]">
+        <div className="hidden lg:block p-2 max-w-[400px] customShadowHomeSlider">
           <Slider
             {...settings}
             className="flex items-center justify-center max-w-[400px]"
@@ -95,10 +94,10 @@ const Hero = () => {
           </Slider>
         </div>
 
-        <div className="flex items-center justify-center lg:hidden">
+        <div className="flex items-center justify-center lg:hidden w-full lg:w-full customShadowHomeSlider">
           <Slider
             {...settings}
-            className=" flex items-center justify-center max-w-[400px]"
+            className=" flex items-center justify-center w-full max-w-full"
           >
             {homegrids.map((grid) => (
               <NavLink

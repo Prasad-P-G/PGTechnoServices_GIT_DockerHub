@@ -9,11 +9,11 @@ const Services = () => {
       id="services"
       className="w-full bg-slate-200 flex flex-col customShadow gap-2 px-7 py-2 lg:px-16 lg-py-3 max-h-full"
     >
-      <div className="flex lg:py-[20px] flex-col gap-2 lg:w-1/2 customShadow">
-        <h1 className=" font-bold text-2xl lg:text-4xl px-5 rounded-lg text-white py-5 w-fit bg-[#6AA9E1]  text-center">
+      <div className="flex lg:py-[20px] flex-col gap-2 lg:w-1/2 m-auto customShadow justify-center items-center">
+        <h1 className=" font-bold text-xl lg:text-2xl px-5 rounded-lg text-white py-5 w-fit bg-[#6AA9E1]  text-center customShadowHome">
           Our Services and activities
         </h1>
-        <p className=" text-sm lg:text-large text-slate-500">
+        <p className=" text-sm lg:text-large p-2 text-slate-500">
           We use best practices in our process and development activities, and
           available team always work on the utilities to develope for our team ,
           helping them to imporove their productivity collaborating in team
