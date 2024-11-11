@@ -100,10 +100,10 @@ const About = () => {
         {/* <div className="flex justify-center flex-row flex-wrap items-center"> */}
         <>
           <>
-            <div className="hidden lg:block  mt-2 bg-red-400">
+            <div className="hidden lg:block  mt-2">
               <Slider
                 {...settings}
-                className="bg-green-500 flex items-center justify-center max-h-[300px]"
+                className="flex items-center justify-center max-h-[300px]"
               >
                 {peoplegrids.map((grid) => (
                   // return (
@@ -147,7 +147,7 @@ const About = () => {
             <div className="lg:hidden px-2">
               <Slider
                 {...settings1}
-                className="bg-green-500 flex items-center justify-center max-h-[310px]"
+                className="flex items-center justify-center max-h-[310px]"
               >
                 {peoplegrids.map((grid) => (
                   // return (
