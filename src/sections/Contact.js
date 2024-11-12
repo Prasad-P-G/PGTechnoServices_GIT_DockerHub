@@ -15,6 +15,8 @@ import { toast } from "react-toastify";
 import validator from "validator";
 import { Dots } from "react-activity";
 import "react-activity/dist/library.css";
+import { useContext, useEffect } from "react";
+import { changeContext } from "../App";
 
 function Contact() {
   const [mobileNumber, setMobileNumber] = useState();
@@ -33,6 +35,12 @@ function Contact() {
   const [emailError, setEmailError] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [nameError, setNameError] = useState("");
+
+  const handleChange = useContext(changeContext);
+
+  useEffect(() => {
+    handleChange(false);
+  }, []);
 
   const handleOnChange = (e) => {
     if (e.target.name == "phoneNumber") {

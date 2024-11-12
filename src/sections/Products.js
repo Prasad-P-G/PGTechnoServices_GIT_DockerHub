@@ -1,8 +1,16 @@
-import React from "react";
+import { useContext, useEffect } from "react";
 import { productgrids } from "../exports";
 import ProductGrid from "../components/ProductGrid";
+import { changeContext } from "../App";
+//import { useContext, useEffect } from "react";
 
 const Products = () => {
+  const handleChange = useContext(changeContext);
+
+  useEffect(() => {
+    handleChange(false);
+  }, []);
+
   return (
     <section
       id="products"

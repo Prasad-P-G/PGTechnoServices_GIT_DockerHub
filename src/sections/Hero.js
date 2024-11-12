@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import heroimage from "../assets/images/heroimg.png";
 import { ReactTyped } from "react-typed";
 import { NavLink } from "react-router-dom";
@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { homegrids } from "../exports";
+import { changeContext } from "../App";
 
 const Hero = () => {
+  const handleChange = useContext(changeContext);
   const settings = {
     dots: true,
     infinite: true,
@@ -18,6 +20,10 @@ const Hero = () => {
     autoplaySpeed: 1500,
     pauseOnFocus: false,
   };
+
+  useEffect(() => {
+    handleChange(true);
+  }, []);
   return (
     <section className="flex flex-col lg:flex-row justify-between w-full items-center gap-2 h-auto lg:h-full">
       <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-2 lg:px-20 lg:py-10 customShadowHome">

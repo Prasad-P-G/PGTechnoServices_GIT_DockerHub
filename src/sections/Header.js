@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
@@ -11,8 +11,9 @@ import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/companyLogo/myCompanyLogo.jpg";
 import { useLocation } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
+import { changeContext } from "../App";
 
-const Header = () => {
+const Header = ({ locationVisible }) => {
   const [iconToggle, seticonToggle] = useState(false);
   const [menuClass, setMenuClass] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -21,6 +22,9 @@ const Header = () => {
   //const [isItemActive, setIsActive] = useState(true);
   const [locationPanel, setLocationPanel] = useState(true);
   //let location = useLocation();
+  // const changeContext = createContext();
+  const handleChange = useContext(changeContext);
+
   const toggleMenu = () => {
     setToggle(!toggle);
   };
@@ -46,9 +50,18 @@ const Header = () => {
   // }, []);
 
   const locationPanelVisibility = () => {
-    setLocationPanel(false);
+    //setLocationPanel(locationVisible);
   };
 
+  useEffect(() => {
+    // handleChange(true);
+    // setLocationPanel(!locationVisible);
+    console.log(
+      "service load called.. and locationVisible is ",
+      locationVisible
+    );
+    //setLocationPanel(locationVisible);
+  }, [locationVisible]);
   useEffect(() => {
     getCurrentLocation();
     postCurrentLocation();
@@ -132,9 +145,9 @@ const Header = () => {
     }
   };
 
-  const handleLiClick = (e) => {
-    console.log("you clicked", e);
-  };
+  // const handleChange = (e) => {
+  //   console.log("the value is ", e);
+  // };
 
   return (
     <>
@@ -151,7 +164,7 @@ const Header = () => {
           {/* <h1 className="text-2xl lg:text-3xl font-bold text-white">
               BPG TECHNO DOMAIN
             </h1> */}
-          {locationPanel && (
+          {locationVisible && (
             <div className="flex flex-col  justify-center gap-1">
               <div className="flex flex-row items-center gap-2">
                 <span className="text-green-600 text-xl lg:text-3xl">
@@ -188,6 +201,7 @@ const Header = () => {
             <h1> {visitorCount}</h1>
           </span>
         </div> */}
+        {/* <changeContext.Provider value={{ handleChange }}> */}
         <div className="hidden lg:flex justify-end items-center gap-2">
           <ul className="flex justify-center items-center gap-3">
             <li>
@@ -226,7 +240,6 @@ const Header = () => {
               Services
             </a> */}
               <NavLink
-                onClick={handleLiClick("services")}
                 to="/services"
                 call={locationPanelVisibility}
                 className="text-lg text-slate-100 cursor-pointer rounded-md px-5 py-2 hover:bg-green-600 hover:text-white active:text-blue-900"
@@ -351,6 +364,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
+
         <div className="flex lg:hidden flex-col">
           {iconToggle ? (
             <div
@@ -494,6 +508,7 @@ const Header = () => {
             </div>
           )}
         </div>
+        {/* </changeContext.Provider> */}
       </section>
     </>
   );

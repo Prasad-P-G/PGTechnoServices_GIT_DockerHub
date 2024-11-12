@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useContext } from "react";
 import { peoplegrids } from "../exports";
 import { MdAccountCircle } from "react-icons/md";
 import PeopleGrid from "../components/PeopleGrid";
@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Button, colors } from "@mui/material";
+import { changeContext } from "../App";
 
 const CustomPrevArrow = (props) => {
   const { className, style, onClick } = props;
@@ -37,6 +38,11 @@ const CustomNextArrow = (props) => {
 };
 
 const About = () => {
+  const handleChange = useContext(changeContext);
+  useEffect(() => {
+    handleChange(false);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
