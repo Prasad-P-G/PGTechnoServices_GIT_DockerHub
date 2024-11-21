@@ -13,11 +13,11 @@ const Hero = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1500,
+    speed: 2500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2500,
     pauseOnFocus: false,
   };
 
@@ -26,14 +26,14 @@ const Hero = () => {
   }, []);
   return (
     <section className="flex flex-col lg:flex-row justify-between w-full items-center gap-2 h-auto lg:h-full">
-      <div className=" flex justify-center items-start flex-col gap-4 w-full lg:w-1/2 px-10 py-2 lg:px-20 lg:py-10 customShadowHome">
-        <div className="text-xl lg:text-5xl font-bold bg-green-500 text-white lg:p-10">
+      <div className=" flex justify-center items-start flex-col gap-2 w-full lg:w-1/2 px-10 py-2 lg:px-20 lg:py-10 customShadowHome">
+        <div className="text-xl lg:text-5xl font-bold bg-green-500 text-white lg:p-5">
           <ReactTyped
             strings={["Research.", "Innovation.", "Discover.", "Adoption."]}
             typeSpeed={70}
             backSpeed={50}
             loop
-            className="py-20 mx-10"
+            className="py-10 mx-10"
           ></ReactTyped>
         </div>
         <h1 className="text-green-600 font-bold text-2xl lg:text-4xl">
@@ -46,7 +46,7 @@ const Hero = () => {
           many more
         </span>
 
-        <div className="flex justify-center items-center gap-2 mt-2">
+        <div className="flex justify-center items-center gap-2">
           <NavLink to="/homemore">
             <button className="bg-green-800 text-white px-2 lg:px-4 py-1 rounded-md text-[10px] lg:text-[18px] hover:bg-black cursor-pointer">
               View More
@@ -64,10 +64,10 @@ const Hero = () => {
           src={heroimage}
           className="w-3/4 lg:w-1/2 rounded-lg lg:rounded-md"
         ></img> */}
-        <div className="hidden lg:block p-2 max-w-[400px] customShadowHomeSlider">
+        <div className="hidden lg:block py-2 max-w-full  customShadowHomeSlider">
           <Slider
             {...settings}
-            className="flex items-center justify-center max-w-[400px]"
+            className="flex items-center justify-center w-[400px] my-2"
           >
             {homegrids.map((grid) => (
               <NavLink
