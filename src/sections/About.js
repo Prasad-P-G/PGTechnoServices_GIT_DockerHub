@@ -46,22 +46,22 @@ const About = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 2500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     pauseOnFocus: false,
   };
 
   const settings1 = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 2500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     pauseOnFocus: false,
   };
   // const settings = {
